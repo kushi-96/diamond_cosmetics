@@ -1,0 +1,37 @@
+dbms	TABLE_SCHEMA	TABLE_NAME	COLUMN_NAME	ORDINAL_POSITION	DATA_TYPE	CHARACTER_MAXIMUM_LENGTH	CONSTRAINT_TYPE	REFERENCED_TABLE_SCHEMA	REFERENCED_TABLE_NAME	REFERENCED_COLUMN_NAME
+mysql	sys	sys_config	variable	1	varchar	128	PRIMARY KEY	NULL	NULL	NULL
+mysql	diamond_cosmetics	migrations	id	1	int	NULL	PRIMARY KEY	NULL	NULL	NULL
+mysql	diamond_cosmetics	users	id	1	bigint	NULL	PRIMARY KEY	NULL	NULL	NULL
+mysql	diamond_cosmetics	users	email	3	varchar	255	UNIQUE	NULL	NULL	NULL
+mysql	diamond_cosmetics	categories	id	1	bigint	NULL	PRIMARY KEY	NULL	NULL	NULL
+mysql	diamond_cosmetics	categories	name	4	varchar	255	UNIQUE	NULL	NULL	NULL
+mysql	diamond_cosmetics	products	id	1	bigint	NULL	PRIMARY KEY	NULL	NULL	NULL
+mysql	diamond_cosmetics	images	id	1	bigint	NULL	PRIMARY KEY	NULL	NULL	NULL
+mysql	diamond_cosmetics	products	category_id	9	bigint	NULL	FOREIGN KEY	diamond_cosmetics	categories	id
+mysql	diamond_cosmetics	images	product_id	5	bigint	NULL	FOREIGN KEY	diamond_cosmetics	products	id
+mysql	diamond_cosmetics	categories	created_at	2	timestamp	NULL	NULL	NULL	NULL	NULL
+mysql	diamond_cosmetics	categories	updated_at	3	timestamp	NULL	NULL	NULL	NULL	NULL
+mysql	diamond_cosmetics	images	image_url	2	varchar	255	NULL	NULL	NULL	NULL
+mysql	diamond_cosmetics	images	created_at	3	timestamp	NULL	NULL	NULL	NULL	NULL
+mysql	diamond_cosmetics	images	updated_at	4	timestamp	NULL	NULL	NULL	NULL	NULL
+mysql	diamond_cosmetics	migrations	migration	2	varchar	255	NULL	NULL	NULL	NULL
+mysql	diamond_cosmetics	migrations	batch	3	int	NULL	NULL	NULL	NULL	NULL
+mysql	diamond_cosmetics	password_resets	email	1	varchar	255	NULL	NULL	NULL	NULL
+mysql	diamond_cosmetics	password_resets	token	2	varchar	255	NULL	NULL	NULL	NULL
+mysql	diamond_cosmetics	password_resets	created_at	3	timestamp	NULL	NULL	NULL	NULL	NULL
+mysql	diamond_cosmetics	products	created_at	2	timestamp	NULL	NULL	NULL	NULL	NULL
+mysql	diamond_cosmetics	products	updated_at	3	timestamp	NULL	NULL	NULL	NULL	NULL
+mysql	diamond_cosmetics	products	name	4	varchar	255	NULL	NULL	NULL	NULL
+mysql	diamond_cosmetics	products	price	5	decimal	NULL	NULL	NULL	NULL	NULL
+mysql	diamond_cosmetics	products	description	6	text	65535	NULL	NULL	NULL	NULL
+mysql	diamond_cosmetics	products	usage	7	text	65535	NULL	NULL	NULL	NULL
+mysql	diamond_cosmetics	products	quantity	8	text	65535	NULL	NULL	NULL	NULL
+mysql	diamond_cosmetics	users	name	2	varchar	255	NULL	NULL	NULL	NULL
+mysql	diamond_cosmetics	users	email_verified_at	4	timestamp	NULL	NULL	NULL	NULL	NULL
+mysql	diamond_cosmetics	users	password	5	varchar	255	NULL	NULL	NULL	NULL
+mysql	diamond_cosmetics	users	remember_token	6	varchar	100	NULL	NULL	NULL	NULL
+mysql	diamond_cosmetics	users	created_at	7	timestamp	NULL	NULL	NULL	NULL	NULL
+mysql	diamond_cosmetics	users	updated_at	8	timestamp	NULL	NULL	NULL	NULL	NULL
+mysql	sys	sys_config	value	2	varchar	128	NULL	NULL	NULL	NULL
+mysql	sys	sys_config	set_time	3	timestamp	NULL	NULL	NULL	NULL	NULL
+mysql	sys	sys_config	set_by	4	varchar	128	NULL	NULL	NULL	NULL

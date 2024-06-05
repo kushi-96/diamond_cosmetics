@@ -1,0 +1,305 @@
+{
+	"info": {
+		"_postman_id": "29e2bd4f-ce53-4151-adf4-0e6e80a41852",
+		"name": "Diamond Cosmetics",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5306729"
+	},
+	"item": [
+		{
+			"name": "Category",
+			"item": [
+				{
+					"name": "create category",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"Eyes\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/categories",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all categories",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/categories",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"categories"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "create product",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Poreless Putty Primer",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "58",
+									"type": "text"
+								},
+								{
+									"key": "category_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": [],
+									"disabled": true
+								},
+								{
+									"key": "description",
+									"value": "This skin perfecting poreless putty primer is infused with Squalane to help grip makeup for all-day wear and help protect skin from moisture loss. The velvety texture glides effortlessly over the skin, smoothing over imperfections while helping minimize the appearance of pores for a poreless effect.",
+									"type": "text"
+								},
+								{
+									"key": "usage",
+									"value": "\n1. Exfoliate your lips.\n2. Line your lips with the CCUK Lip definer, then fill them in.\n3. Blot your lips for an extra-matte finish.\n*Please note that actual colours may vary slightly.",
+									"type": "text"
+								},
+								{
+									"key": "quantity",
+									"value": "23",
+									"type": "text"
+								},
+								{
+									"key": "images[]",
+									"type": "file",
+									"src": "/Users/bhag-isi/Downloads/primer.jpeg"
+								},
+								{
+									"key": "images[]",
+									"type": "file",
+									"src": "/Users/bhag-isi/Downloads/elf3.jpeg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get details of a product",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/products/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"products",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update product",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Transfer-Encoding",
+								"value": "",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "delete_images[]",
+									"value": "19",
+									"contentType": "multipart/form-data",
+									"description": "Provide the ID of the image to be removed.",
+									"type": "text"
+								},
+								{
+									"key": "delete_images[]",
+									"value": "20",
+									"contentType": "multipart/form-data",
+									"description": "Provide the ID of the image to be removed.",
+									"type": "text"
+								},
+								{
+									"key": "images[]",
+									"type": "file",
+									"src": []
+								},
+								{
+									"key": "name",
+									"value": "Edited Product",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "200",
+									"type": "text"
+								},
+								{
+									"key": "category_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Edited description",
+									"type": "text"
+								},
+								{
+									"key": "usage",
+									"value": "Edited usage",
+									"type": "text"
+								},
+								{
+									"key": "quantity",
+									"value": "10",
+									"type": "text"
+								},
+								{
+									"key": "images[]",
+									"description": "Upload the replacement image",
+									"type": "file",
+									"src": "/Users/bhag-isi/Documents/Pictures/red lipstick2.jpeg"
+								},
+								{
+									"key": "images[]",
+									"description": "Upload the replacement image",
+									"type": "file",
+									"src": "/Users/bhag-isi/Documents/Pictures/red lipstick04.jpeg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/products/update/10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"products",
+								"update",
+								"10"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete product",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/products/10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"products",
+								"10"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
