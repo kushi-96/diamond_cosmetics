@@ -4,8 +4,6 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ProductController;
 
-
-
 /*
 |--------------------------------------------------------------------------
 | API Routes
